@@ -200,6 +200,7 @@ init python:
 
     build.documentation('*.html')
     build.documentation('*.txt')
+    # config.auto_voice = "voice/{}.mp3"
 
 
 ## A Google Play license key is required to perform in-app purchases. It can be
