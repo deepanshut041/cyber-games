@@ -40,6 +40,7 @@ for project_dir in ${root_dir}/*; do
       if [ -d "${build_dir}" ]; then
         game_dir=$(find "${build_dir}" -type d -name '*-web' | head -n 1)
         if [ -d "${game_dir}" ]; then
+          cp "${project_dir}/web-presplash.jpg" "${game_dir}/web-presplash.jpg"
           mv ${game_dir}  "${output_dir}/${project_name}"
 
           rm -rf "${build_dir}"
