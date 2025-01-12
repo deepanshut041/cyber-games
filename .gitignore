@@ -1,0 +1,15 @@
+log.txt
+traceback.txt
+errors.txt
+dialogue.txt
+progressive_download.txt
+traceback.txt
+*.rpyc
+*.bak
+game/cache/
+game/saves/
+.rpymc
+game/tl/
+.vscode
+.vscode/
+renpy/
