@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            width: 100%;
+            padding: 1rem 0;
+            text-align: center;
+            font-size: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .game-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .game-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .game-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .game-card .content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .game-card .content h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .game-card .content p {
+            font-size: 0.9rem;
+            color: #777;
+            margin: 10px 0;
+        }
+
+        .game-card .play-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .game-card .play-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Welcome to Game Hub
+    </header>
+
+    <div class="game-container">
+        <!-- Example Game Card -->
+        <div class="game-card" onclick="window.location.href='./guardian_of_the_digital_realm'">
+            <img src="./game1.jpg" alt="Game 1">
+            <div class="content">
+                <h3>Game 1</h3>
+                <p>An exciting adventure game!</p>
+                <button class="play-button">Play Now</button>
+            </div>
+        </div>
+
+        <div class="game-card" onclick="window.location.href='../guardian_of_the_digital_realm/index.html'">
+            <img src="./game2.jpg" alt="Game 2">
+            <div class="content">
+                <h3>Game 2</h3>
+                <p>A thrilling racing challenge!</p>
+                <button class="play-button">Play Now</button>
+            </div>
+        </div>
+
+        <div class="game-card" onclick="window.location.href='./game3.html'">
+            <img src="./game3.jpg" alt="Game 3">
+            <div class="content">
+                <h3>Game 3</h3>
+                <p>Test your strategy skills!</p>
+                <button class="play-button">Play Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
