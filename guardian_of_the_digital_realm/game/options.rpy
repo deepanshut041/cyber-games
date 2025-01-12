@@ -39,6 +39,12 @@ define gui.about = _p("""
 
 define build.name = "GuardianoftheDigitalRealm"
 
+# Build Platforms
+define build.include_windows = False
+define build.include_mac = False
+define build.include_linux = False
+define build.include_web = True
+
 
 ## Sounds and music ############################################################
 

@@ -1,0 +1,36 @@
+name: Build and Deploy Ren'Py Projects to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Install dependencies
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes bzip2 wget libxext6 libllvm6.0 mesa-utils unzip rsync
+
+      # Step 3: Make the script executable
+      - name: Prepare Build Script
+        run: chmod +x ./build.sh
+
+      # Step 4: Build as move  Ren'Py projects
+      - name: Build Ren'Py Projects
+        run: ./build.sh
+
+      # Step 6: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./gh-pages
